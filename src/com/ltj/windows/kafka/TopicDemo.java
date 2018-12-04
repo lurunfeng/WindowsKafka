@@ -13,7 +13,7 @@ public class TopicDemo {
 	public static void main(String[] args) {
 		// 创建topic
 		Properties props = new Properties();
-		props.put("bootstrap.servers", "192.168.0.144:9092");
+		props.put("bootstrap.servers", "localhost:9092");
 		AdminClient adminClient = AdminClient.create(props);
 		ArrayList<NewTopic> topics = new ArrayList<NewTopic>();
 		NewTopic newTopic = new NewTopic("topic-test", 1, (short) 1);
